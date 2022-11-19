@@ -11,6 +11,7 @@ PersonaCrl.crearPersona = async (req,res) => {
     //metodo crear persona
     const{name,email,password}=req.body 
 
+    
     const NuevaPersona = new Persona({
         name,
         email,
