@@ -27,6 +27,7 @@ function App() {
         </div>
       </nav>
 
+
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Inicio/>} exact></Route>
@@ -35,6 +36,7 @@ function App() {
       <Route path="/Login" element={<Login />} exact></Route>
     </Routes>
   </BrowserRouter>
+  
     </div>
   );
 }
