@@ -39,5 +39,43 @@ PersonaCrl.crearPersona = async (req,res) => {
     
   };
 
+  PersonaCrl.listar = async (req,res) => {
+  const respuesta =await Persona.find()
+  res.json(respuesta)
+};
+
+PersonaCrl.actualizar = async (req,res) => {
+    const id =req.params.id 
+  const respuesta =await Persona.findByIdAndUpdate({_id:id})
+  res.json(
+    {
+        mensaje:"persona actualisada"
+    }
+  )
+};
+PersonaCrl.eliminaR = async (req,res) => {
+    const id =req.params.id 
+  const respuesta =await Persona.findByIdAndRemove({_id:id})
+  res.json(
+    {
+        mensaje:"persona ELIMINADA"
+    }
+  )
+};
+
+PersonaCrl.buscar = async (req,res) => {
+    const nombre =req.params.name 
+    try {
+        const respuesta =await Persona.find({Description:nombre})
+        res.json(respuesta )
+        
+    } catch (error) {
+        return res.status(400).json({
+            mensaje:'Ocurrio un Error',
+            error
+        })
+        
+    }
+};
   module.exports= PersonaCrl
   
