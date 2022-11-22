@@ -40,3 +40,4 @@ PersonaCrl.crearPersona = async (req,res) => {
   };
 
   module.exports= PersonaCrl
+  
