@@ -5,6 +5,7 @@ import Registro from './components/Registro';
 import Login from './components/Login'
 import Inicio from './components/Inicio';
 import Tabla from './components/Tabla'
+import Formulario from "./components/formulario";
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
               <li className="nav-item">
                 <a className="nav-link" href="Tabla">Tabla</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="formulario">Buscar</a>
+              </li>
                
             </ul> 
           </div>
@@ -38,6 +42,7 @@ function App() {
       <Route path="/Inicio" element={<Inicio/>} exact></Route>
       <Route path="/Registro" element={<Registro/>} exact></Route>
       <Route path="/Login" element={<Login />} exact></Route>
+      <Route path="/formulario" element={<Formulario />} exact></Route>
       
       <Route path="/Tabla" element={<Tabla />} exact></Route>
     </Routes>
