@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import { Card,Carousel } from 'react-bootstrap';
+import Kards from './kards';
 
 
 const Inicio =()=> {
@@ -77,6 +78,9 @@ const Inicio =()=> {
         <Button variant="primary">Ver Receta</Button>
       </Card.Body>
     </Card>
+    </>
+    <Kards />
+    <>
     </>
         </div>
         

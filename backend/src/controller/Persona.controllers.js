@@ -62,6 +62,41 @@ PersonaCrl.eliminaR = async (req,res) => {
     }
   )
 };
+PersonaCrl.login = async (req,res) => {
+    const {email,password}=req.body
+    
+  const respuesta =await Persona.findOne({email:email})
+  if (!respuesta) {
+      res.json(
+        {
+            mensaje:"Correo no Existe"             
+        }
+      )
+
+
+
+    
+  }else{
+
+      //console.log(Persona," ",password,"   ",respuesta.password)
+     const mathc =await bcrypt.compare(password,respuesta.password)
+     if (mathc) {
+        const token =jwt.sign({_id:Persona._id},'secreta')
+        res.json({
+            mensaje:'Bienvenido',
+            id:Persona.id,
+            nombre:Persona.name,
+            token 
+    
+        })
+     }else{
+        res.json({
+            mensaje:'Credenciales invalidas'
+        })
+     }
+  }
+
+};
 
 PersonaCrl.buscar = async (req,res) => {
     const nombre =req.params.name 

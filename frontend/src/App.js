@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Registro from './components/Registro';
 import Login from './components/Login'
 import Inicio from './components/Inicio';
-
+import Tabla from './components/Tabla'
 
 
 function App() {
@@ -22,6 +22,10 @@ function App() {
               <li className="nav-item">
                 <a className="nav-link" href="Registro">Registrarse</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="Tabla">Tabla</a>
+              </li>
+               
             </ul> 
           </div>
         </div>
@@ -34,6 +38,8 @@ function App() {
       <Route path="/Inicio" element={<Inicio/>} exact></Route>
       <Route path="/Registro" element={<Registro/>} exact></Route>
       <Route path="/Login" element={<Login />} exact></Route>
+      
+      <Route path="/Tabla" element={<Tabla />} exact></Route>
     </Routes>
   </BrowserRouter>
   
