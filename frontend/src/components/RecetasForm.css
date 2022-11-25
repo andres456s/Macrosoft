@@ -1,0 +1,46 @@
+.container3 {
+    position: relative;
+    width: 365px;
+    height: 674px;
+    border-radius: 20px;
+    
+    padding: 40px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    margin-left: 4%;
+    margin-top: 0px;
+  }
+.form-control {
+    
+    background: #824bca27;
+    
+
+}
+.imagenComida{
+    
+    box-shadow: 14px 14px 30px #a3b6dd, -14px -14px 40px rgb(209, 200, 224);
+    position: relative;
+    margin-left: 2%;
+    left : 140%;
+    margin-right: -190%;
+    top: 10%;
+    margin-top: -210%  ;
+    
+   
+    
+    
+    
+  
+}
+.cre {
+    
+    
+    
+    margin-top: 20px;
+
+}
+
+
+
+  

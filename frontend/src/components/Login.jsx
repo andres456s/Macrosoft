@@ -4,9 +4,14 @@ import { useState,useEffect } from 'react';
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import Button from 'react-bootstrap/Button';
+import './login.css'
+
+
+
 
 
 const Login =()=> {
+  
   //metodo de login
   
   const [email,setemail]=useState(' ')
@@ -58,12 +63,13 @@ const Login =()=> {
       
     };
   return (
+    
 
     <div className='container'>
             <div className='row'>
                 <h2 className='mt-6'>Iniciar sesión</h2>
             </div>
-      <Form className='container' onSubmit={login}>
+      <Form className='container2' onSubmit={login}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label>Dirección de correo</Form.Label>
           <Form.Control type="email" placeholder="Ingrese su correo eléctronico" onChange={(e)=>setemail(e.target.value)}/>

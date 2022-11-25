@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import { Card,Carousel } from 'react-bootstrap';
+import './inicio.css'
 
 
 const Inicio =()=> {
