@@ -36,7 +36,7 @@ const RecetasForm =()=> {
                 </div>
                 
             <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
+            <label for="exampleFormControlSelect2">Tipo</label>
             <select multiple class="form-control" id="exampleFormControlSelect2">
                 <option>Vegana</option>
                 <option>Mexicana</option>
