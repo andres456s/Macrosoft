@@ -5,17 +5,18 @@ RecetaCrl.crearReceta = async (req,res) => {
     
     
 
-    const{Nombre,Puntuación,Comentarios,Fecha,Tiempo_de_preparación,Dificultad,Tipo_de_comida,Lugar_de_origen}=req.body 
+    const{Nombre,Tipo,Puntuación,Dificultad,Comentarios,Fecha,Tiempo_de_preparación,Tipo_de_comida,Lugar_de_origen}=req.body 
 
     const NuevaReceta = new Receta({
         Nombre,
+        Tipo,
         Puntuación,
         Comentarios,
         Fecha,
-       /* Tiempo_de_preparación,
+        Tiempo_de_preparación,
         Dificultad,
         Tipo_de_comida,
-        Lugar_de_origen,*/
+        Lugar_de_origen,
         
     })
  const respuesta =await NuevaReceta.save()
@@ -47,7 +48,7 @@ RecetaCrl.crearReceta = async (req,res) => {
   const respuesta =await Receta.findByIdAndUpdate({_id:id})
   res.json(
     {
-        mensaje:"Receta actualisada"
+        mensaje:"Receta actualizada"
     }
   )
 };
@@ -69,7 +70,7 @@ RecetaCrl.buscar = async (req,res) => {
         
     } catch (error) {
         return res.status(400).json({
-            mensaje:'Ocurrio un Error',
+            mensaje:'Ha ocurrido un error. Intente nuevamente.',
             error
         })
         

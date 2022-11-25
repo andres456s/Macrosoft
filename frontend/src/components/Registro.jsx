@@ -43,7 +43,7 @@ const Registro =()=> {
 
       Swal.fire({
         icon:'success',
-        title:"Usuario creado correctamente correctamente",
+        title:"Usuario creado exitosamente!",
         showConfirmButton:false,
         timer:1500
 

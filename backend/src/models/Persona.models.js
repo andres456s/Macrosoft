@@ -7,6 +7,7 @@ const PersonaSchema = new Schema({
   name:String,
   email:String,
   password:String,
+
   Description:{type:String,default:'lorem'}
 });
 
