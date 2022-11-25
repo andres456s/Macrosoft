@@ -112,5 +112,6 @@ PersonaCrl.buscar = async (req,res) => {
         
     }
 };
+
   module.exports= PersonaCrl
   

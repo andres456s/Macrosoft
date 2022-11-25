@@ -26,7 +26,7 @@ const Kards = () => {
     console.log(respuesta)
     setreceta(respuesta.data)
   }
-  const buscarRecetas = async () => {
+  /*const buscarRecetas = async () => {
     axios.defaults.baseURL = 'http://localhost:4000'
     const id = sessionStorage.getItem('idUsuario')
     const token = sessionStorage.getItem('token')
@@ -44,7 +44,7 @@ const Kards = () => {
     if (receta._id['Nombre']!='mod') {
       console.log(receta._id,'  ')
     }
-  }
+  }*/
   
   const datas = receta.map(receta => (
     

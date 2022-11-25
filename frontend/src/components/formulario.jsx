@@ -9,51 +9,94 @@ import Tarj from './Tarj';
 
 function ButtonsExample() {
 
-  const [name,setName]=useState(' ')
+  const [name, setName] = useState(' ')
   const [receta, setreceta] = useState([])
+  const [recetaLN, setrecetaLN] = useState([])
 
   const buscarRecetas = async (e) => {
     e.preventDefault();
     axios.defaults.baseURL = 'http://localhost:4000'
     const id = sessionStorage.getItem('idUsuario')
     const token = sessionStorage.getItem('token')
-    const respuesta = await axios.get('/receta/buscar/'+name, {
+    const respuesta = await axios.get('/receta/buscar/' + name, {
       headers: { 'autorizacion': token }
     })
     console.log('respuesta')
     setreceta(respuesta.data)
   }
-  /*const buscarRecetas = async (e) => {
+  
+  //LN=listadas por nombre acedente
+  const buscarRecetasLN = async (e) => {
     e.preventDefault();
-      console.log(name)
-    };*/
-    const datas = receta.map(receta => (
-      <Tarj key={receta._id} {...receta} />
-      ))
+    axios.defaults.baseURL = 'http://localhost:4000'
+    const id = sessionStorage.getItem('idUsuario')
+    const token = sessionStorage.getItem('token')
+    const respuesta = await axios.get('/receta/listarPnombre' , {
+      headers: { 'autorizacion': token }
+    })
+    console.log('respuesta')
+    setreceta(respuesta.data)
+  }
+  //LF=listadas por fecha acedente
+  const buscarRecetasLF = async (e) => {
+    e.preventDefault();
+    axios.defaults.baseURL = 'http://localhost:4000'
+    const id = sessionStorage.getItem('idUsuario')
+    const token = sessionStorage.getItem('token')
+    const respuesta = await axios.get('/receta/listarPfecha' , {
+      headers: { 'autorizacion': token }
+    })
+    console.log('respuesta')
+    setreceta(respuesta.data)
+  }
+  const datas = receta.map(receta => (
+    <Tarj key={receta._id} {...receta} />
+  ))
+  
+  
+  
+
+  
+
+ 
 
 
-      return (
-        <div className='container'>
-        <Form onSubmit={buscarRecetas}>
-
-         <InputGroup  >
-        <Form.Control
-          placeholder="Recipient's username" onChange={(e)=>setName(e.target.value)}
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-          />
-        <Button variant="primary" type="submit">
-        Confirmar Registro
-      </Button>
-          
-      </InputGroup>
-          </Form>
-
-          <div >
-          {datas}
-          </div>
+  return (
+    <div className='container' >
+      <Form onSubmit={buscarRecetasLN} >
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <Button variant="primary" type="submit" class="btn btn-outline-info">
+            Listar Por Nombres
+          </Button>
         </div>
-    
+      </Form>
+
+      <Form onSubmit={buscarRecetas}>
+        <InputGroup  >
+          <Form.Control
+            placeholder="Recipient's username" onChange={(e) => setName(e.target.value)}
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"/>
+          <Button variant="primary" type="submit" class="btn btn-outline-success">
+            Buscar por Nombres
+          </Button>
+        </InputGroup>
+      </Form>
+
+      <Form onSubmit={buscarRecetasLF}>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <Button variant="primary" type="submit"  class="btn btn-outline-primary">
+          Listar Por Fechas
+          </Button>
+        </div>
+      </Form>
+      
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        {datas}
+      </div>
+    </div>
+
   )
 
 }
