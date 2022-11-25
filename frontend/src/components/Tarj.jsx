@@ -6,7 +6,6 @@ import Card from 'react-bootstrap/Card';
 const Tarj = ({Nombre,descripcion}) => {
 
 
-
   return (
     <div>
         <Card style={{ width: '18rem' }}>

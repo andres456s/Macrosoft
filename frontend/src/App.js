@@ -6,6 +6,9 @@ import Login from './components/Login'
 import Inicio from './components/Inicio';
 import Tabla from './components/Tabla'
 import Formulario from "./components/formulario";
+import { Tarjeta } from './components/tarjeta';
+import KardsAdmn from './components/KardsAdmn';
+import Kards from './components/kards';
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
               <li className="nav-item">
                 <a className="nav-link" href="formulario">Buscar</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="KardsAdmn">Statics</a>
+              </li>
                
             </ul> 
           </div>
@@ -43,6 +49,10 @@ function App() {
       <Route path="/Registro" element={<Registro/>} exact></Route>
       <Route path="/Login" element={<Login />} exact></Route>
       <Route path="/formulario" element={<Formulario />} exact></Route>
+
+      <Route path="/KardsAdmn" element={<KardsAdmn />} exact></Route>
+      
+      <Route path="/tarjeta" element={<Tarjeta />} exact></Route>
       
       <Route path="/Tabla" element={<Tabla />} exact></Route>
     </Routes>
