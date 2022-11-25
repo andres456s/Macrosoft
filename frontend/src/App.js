@@ -4,11 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Registro from './components/Registro';
 import Login from './components/Login'
 import Inicio from './components/Inicio';
+
+import RecetasForm from './components/RecetasForm';
+
+
 import Tabla from './components/Tabla'
 import Formulario from "./components/formulario";
 import { Tarjeta } from './components/tarjeta';
 import KardsAdmn from './components/KardsAdmn';
 import Kards from './components/kards';
+
 
 
 function App() {
@@ -25,6 +30,11 @@ function App() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="Registro">Registrarse</a>
+               
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="RecetasForm">Crear Receta</a>
+               
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="Tabla">Tabla</a>
@@ -48,6 +58,9 @@ function App() {
       <Route path="/Inicio" element={<Inicio/>} exact></Route>
       <Route path="/Registro" element={<Registro/>} exact></Route>
       <Route path="/Login" element={<Login />} exact></Route>
+
+      <Route path="/RecetasForm" element={<RecetasForm/>} exact></Route>
+
       <Route path="/formulario" element={<Formulario />} exact></Route>
 
       <Route path="/KardsAdmn" element={<KardsAdmn />} exact></Route>
@@ -55,6 +68,7 @@ function App() {
       <Route path="/tarjeta" element={<Tarjeta />} exact></Route>
       
       <Route path="/Tabla" element={<Tabla />} exact></Route>
+
     </Routes>
   </BrowserRouter>
   
