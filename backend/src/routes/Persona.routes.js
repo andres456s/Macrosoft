@@ -10,5 +10,6 @@ router.get("/listarPersn",PersonaCrl.listar)
 router.put("/actualizarPersn/:id",PersonaCrl.actualizar)
 router.delete("/eliminarPersn/:id",PersonaCrl.eliminaR)
 router.get("/buscarPersn/:name",PersonaCrl.buscar)
+router.post("/login",PersonaCrl.login)
 
 module.exports = router;

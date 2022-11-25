@@ -5,12 +5,13 @@ RecetaCrl.crearReceta = async (req,res) => {
     
     
 
-    const{Nombre,Puntuación,Comentarios,Tiempo_de_preparación,Dificultad,Tipo_de_comida,Lugar_de_origen}=req.body 
+    const{Nombre,Puntuación,Comentarios,Fecha,Tiempo_de_preparación,Dificultad,Tipo_de_comida,Lugar_de_origen}=req.body 
 
     const NuevaReceta = new Receta({
         Nombre,
         Puntuación,
         Comentarios,
+        Fecha,
        /* Tiempo_de_preparación,
         Dificultad,
         Tipo_de_comida,
@@ -29,8 +30,20 @@ RecetaCrl.crearReceta = async (req,res) => {
     const respuesta =await Receta.find()
     res.json(respuesta)
   };
+  RecetaCrl.listarPnombre = async (req,res) => {
+    const respuesta =await Receta.find().sort({Nombre:1})
+    res.json(respuesta)
+  };
+  RecetaCrl.listarPfecha = async (req,res) => {
+    const respuesta =await Receta.find().sort({Fecha:1})
+    res.json(respuesta)
+  };
+
+
   RecetaCrl.actualizar = async (req,res) => {
     const id =req.params.id 
+
+
   const respuesta =await Receta.findByIdAndUpdate({_id:id})
   res.json(
     {
