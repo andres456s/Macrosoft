@@ -12,6 +12,7 @@ function ButtonsExample() {
   const [name, setName] = useState(' ')
   const [receta, setreceta] = useState([])
   const [recetaLN, setrecetaLN] = useState([])
+  const [recetaLT, setrecetaLT] = useState([])
 
   const buscarRecetas = async (e) => {
     e.preventDefault();
@@ -32,6 +33,18 @@ function ButtonsExample() {
     const id = sessionStorage.getItem('idUsuario')
     const token = sessionStorage.getItem('token')
     const respuesta = await axios.get('/receta/listarPnombre' , {
+      headers: { 'autorizacion': token }
+    })
+    console.log('respuesta')
+    setreceta(respuesta.data)
+  }
+  //LN=listadas por tiempo de preparación
+  const buscarRecetasLT = async (e) => {
+    e.preventDefault();
+    axios.defaults.baseURL = 'http://localhost:4000'
+    const id = sessionStorage.getItem('idUsuario')
+    const token = sessionStorage.getItem('token')
+    const respuesta = await axios.get('/receta/listarPTiempo' , {
       headers: { 'autorizacion': token }
     })
     console.log('respuesta')
@@ -86,11 +99,18 @@ function ButtonsExample() {
       <Form onSubmit={buscarRecetasLF}>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <Button variant="primary" type="submit"  class="btn btn-outline-primary">
-          Listar Por Fechas
+          Buscar Por Fechas
           </Button>
         </div>
       </Form>
       
+      <Form onSubmit={buscarRecetasLT} >
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <Button variant="primary" type="submit" class="btn btn-outline-info">
+            Listar Por Tiempo
+          </Button>
+        </div>
+      </Form>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
         {datas}

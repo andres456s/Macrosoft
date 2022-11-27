@@ -13,6 +13,7 @@ import Formulario from "./components/formulario";
 import { Tarjeta } from './components/tarjeta';
 import KardsAdmn from './components/KardsAdmn';
 import Kards from './components/kards';
+import PanelDeAyuda from './components/PaneldeAyuda';
 
 
 
@@ -34,6 +35,11 @@ function App() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="RecetasForm">Crear Receta</a>
+                
+                </li>
+              <li className="nav-item">
+                <a className="nav-link" href="PanelDeAyuda">Panel De Ayuda</a>
+            
                
               </li>
               <li className="nav-item">
@@ -58,6 +64,7 @@ function App() {
       <Route path="/Inicio" element={<Inicio/>} exact></Route>
       <Route path="/Registro" element={<Registro/>} exact></Route>
       <Route path="/Login" element={<Login />} exact></Route>
+      <Route path="/PanelDeAyuda" element={<PanelDeAyuda />} exact></Route>
 
       <Route path="/RecetasForm" element={<RecetasForm/>} exact></Route>
 
