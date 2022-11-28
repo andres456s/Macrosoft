@@ -32,14 +32,14 @@ const Tarj = ({Nombre,Tipo,Puntuación,Dificultad,Comentarios,Fecha,Tiempo_de_pr
         <Modal.Header closeButton>
           <Modal.Title>{Nombre}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Tipo:{Tipo}</Modal.Body>
-        <Modal.Body>Puntuación:{Puntuación}</Modal.Body>
-        <Modal.Body>Dificultad:{Dificultad}</Modal.Body>
-        <Modal.Body>Comentarios del autor:{Comentarios}</Modal.Body>
         <Modal.Body>Fecha:{Fecha}</Modal.Body>
+        <Modal.Title class="card-subtitle mb-2 text-muted">   Categorias</Modal.Title>
         <Modal.Body>Tiempo de preparación:{Tiempo_de_preparación}</Modal.Body>
+        <Modal.Body>Dificultad:{Dificultad}</Modal.Body>
         <Modal.Body>Tipo de comida:{Tipo_de_comida}</Modal.Body>
         <Modal.Body>Lugar de origen:{Lugar_de_origen}</Modal.Body>
+        <Modal.Body>Descripcion:{Comentarios}</Modal.Body>
+        <Modal.Body>Puntuación:{Puntuación}</Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
             Close
