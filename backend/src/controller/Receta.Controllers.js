@@ -43,6 +43,10 @@ RecetaCrl.crearReceta = async (req,res) => {
     const respuesta =await Receta.find().sort({Tiempo:1})
     res.json(respuesta)
   };
+  RecetaCrl.listarPOrigen = async (req,res) => {
+    const respuesta =await Receta.find().sort({Lugar_de_origen:1})
+    res.json(respuesta)
+  };
 
 
   RecetaCrl.actualizar = async (req,res) => {

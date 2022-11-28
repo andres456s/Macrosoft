@@ -62,6 +62,18 @@ function ButtonsExample() {
     console.log('respuesta')
     setreceta(respuesta.data)
   }
+  //LO=listadas por lugar de origen
+  const buscarRecetasLO = async (e) => {
+    e.preventDefault();
+    axios.defaults.baseURL = 'http://localhost:4000'
+    const id = sessionStorage.getItem('idUsuario')
+    const token = sessionStorage.getItem('token')
+    const respuesta = await axios.get('/receta/listarPorigen' , {
+      headers: { 'autorizacion': token }
+    })
+    console.log('respuesta')
+    setreceta(respuesta.data)
+  }
   const datas = receta.map(receta => (
     <Tarj key={receta._id} {...receta} />
   ))
@@ -104,13 +116,16 @@ function ButtonsExample() {
         </div>
       </Form>
       
-      <Form onSubmit={buscarRecetasLT} >
+      <Form onSubmit={buscarRecetasLO} >
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <Button variant="primary" type="submit" class="btn btn-outline-info">
-            Listar Por Tiempo
+            Listar Por Lugar de Origen
           </Button>
         </div>
       </Form>
+      
+    
+    
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
         {datas}
