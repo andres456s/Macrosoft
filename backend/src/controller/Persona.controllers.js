@@ -49,7 +49,7 @@ PersonaCrl.actualizar = async (req,res) => {
   const respuesta =await Persona.findByIdAndUpdate({_id:id})
   res.json(
     {
-        mensaje:"persona actualisada"
+        mensaje:"persona actualizada"
     }
   )
 };
@@ -101,7 +101,7 @@ PersonaCrl.login = async (req,res) => {
 PersonaCrl.buscar = async (req,res) => {
     const nombre =req.params.name 
     try {
-        const respuesta =await Persona.find({Description:nombre})
+        const respuesta =await Persona.find({name:nombre})
         res.json(respuesta )
         
     } catch (error) {
