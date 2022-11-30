@@ -8,6 +8,7 @@ import RecetasForm from './components/RecetasForm';
 
 import Tabla from './components/Tabla'
 import Formulario from "./components/formulario";
+import B_usuario from "./components/B_usuario";
 import { Tarjeta } from './components/tarjeta';
 import KardsAdmn from './components/KardsAdmn';
 import Kards from './components/kards';
@@ -39,7 +40,10 @@ function App() {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="formulario">Buscar</a>
+                <a className="nav-link" href="formulario">Buscar Receta</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="BuscarUsuario">Buscar Usuario</a>
               </li>
 
               <li className="nav-item">
@@ -75,6 +79,8 @@ function App() {
       <Route path="/RecetasForm" element={<RecetasForm/>} exact></Route>
 
       <Route path="/formulario" element={<Formulario />} exact></Route>
+
+      <Route path="/BuscarUsuario" element={<B_usuario/>} exact></Route>
 
       <Route path="/KardsAdmn" element={<KardsAdmn />} exact></Route>
       
