@@ -9,12 +9,13 @@ PersonaCrl.crearPersona = async (req,res) => {
 
 
     //metodo crear persona
-    const{name,email,password}=req.body 
+    const{name,email,password,Description}=req.body 
 
     const NuevaPersona = new Persona({
         name,
         email,
         password,
+        Description,
     })
 
     const correoPersona =await Persona.findOne({email:email})
@@ -49,7 +50,7 @@ PersonaCrl.actualizar = async (req,res) => {
   const respuesta =await Persona.findByIdAndUpdate({_id:id})
   res.json(
     {
-        mensaje:"persona actualisada"
+        mensaje:"persona actualizada"
     }
   )
 };

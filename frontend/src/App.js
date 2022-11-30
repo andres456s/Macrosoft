@@ -1,9 +1,7 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Registro from './components/Registro';
-import Login from './components/Login'
-import Inicio from './components/Inicio';
+
 
 import RecetasForm from './components/RecetasForm';
 
@@ -14,7 +12,9 @@ import { Tarjeta } from './components/tarjeta';
 import KardsAdmn from './components/KardsAdmn';
 import Kards from './components/kards';
 import PanelDeAyuda from './components/PaneldeAyuda';
-
+import Registro from './components/Registro';
+import Login from './components/Login'
+import Inicio from './components/Inicio';
 
 
 function App() {
@@ -26,32 +26,30 @@ function App() {
           <a className="navbar-brand" href="Inicio">MacroFood</a>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li className="nav-item">
+                <a className="nav-link" href="RecetasForm">Crear Receta</a>
+                </li>
+              <li className="nav-item">
+                <a className="nav-link" href="PanelDeAyuda">Panel De Ayuda</a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="formulario">Buscar</a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="KardsAdmn">Statics</a>
+              </li>
+
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="Login">Iniciar Sesión</a>
               </li>
+
               <li className="nav-item">
                 <a className="nav-link" href="Registro">Registrarse</a>
                
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="RecetasForm">Crear Receta</a>
-                
-                </li>
-              <li className="nav-item">
-                <a className="nav-link" href="PanelDeAyuda">Panel De Ayuda</a>
-            
-               
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="Tabla">Tabla</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="formulario">Buscar</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="KardsAdmn">Statics</a>
-              </li>
-               
             </ul> 
           </div>
         </div>
@@ -61,9 +59,13 @@ function App() {
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Inicio/>} exact></Route>
+
       <Route path="/Inicio" element={<Inicio/>} exact></Route>
+
       <Route path="/Registro" element={<Registro/>} exact></Route>
+
       <Route path="/Login" element={<Login />} exact></Route>
+
       <Route path="/PanelDeAyuda" element={<PanelDeAyuda />} exact></Route>
 
       <Route path="/RecetasForm" element={<RecetasForm/>} exact></Route>
