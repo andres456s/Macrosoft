@@ -36,15 +36,29 @@ const RecetasForm =()=> {
                 </div>
                 
             <div class="form-group">
-            <label for="exampleFormControlSelect2">Tipo</label>
+            <label for="exampleFormControlSelect2">Lugar De Origen</label>
             <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>Vegana</option>
+                <option>Colombiana</option>
                 <option>Mexicana</option>
-                <option>Tipica</option>
-                <option>Rapida</option>
+                
+                <option>Japonesa</option>
                 <option>Italiana</option>
                 <option>China</option>
                 <option>India</option>
+                <option>Otro Lugar</option>
+             </select>
+            </div>
+            <div class="form-group">
+            <label for="exampleFormControlSelect2">tipo</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>Comida Rápida</option>
+                <option>Mexicana</option>
+                
+                <option>Comida Típica</option>
+                <option>Desayuno</option>
+                <option>Ensalada</option>
+                <option>Pastas</option>
+                <option>Vegana</option>
              </select>
             </div>
             <div class="form-group">

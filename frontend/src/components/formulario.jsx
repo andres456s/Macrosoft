@@ -5,7 +5,7 @@ import { useState, useEffect, UseEffect } from 'react';
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import Tarj from './Tarj';
-
+import './formulario.css'
 
 function ButtonsExample() {
 
@@ -87,30 +87,36 @@ function ButtonsExample() {
 
 
   return (
-    <div className='container' >
+    <div className='containerr' >
+      <div className='containerre' >
       <Form onSubmit={buscarRecetasLN} >
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <Button variant="primary" type="submit" class="btn btn-outline-info">
+          <Button className='btn1' variant="primary" type="submit" class="btn btn-outline-info">
             Listar Por Nombres
           </Button>
         </div>
       </Form>
-
+      
       <Form onSubmit={buscarRecetas}>
         <InputGroup  >
+       
           <Form.Control
-            placeholder="Recipient's username" onChange={(e) => setName(e.target.value)}
+            placeholder="Name" onChange={(e) => setName(e.target.value)}
             aria-label="Recipient's username"
             aria-describedby="basic-addon2"/>
-          <Button variant="primary" type="submit" class="btn btn-outline-success">
+           
+             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <Button className='btn3'variant="primary" type="submit" class="btn btn-outline-success">
             Buscar por Nombres
           </Button>
+          </div>
+          
         </InputGroup>
       </Form>
 
       <Form onSubmit={buscarRecetasLF}>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <Button variant="primary" type="submit"  class="btn btn-outline-primary">
+          <Button className='btn2' variant="primary" type="submit"  class="btn btn-outline-primary">
           Buscar Por Fechas
           </Button>
         </div>
@@ -118,7 +124,7 @@ function ButtonsExample() {
       
       <Form onSubmit={buscarRecetasLO} >
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <Button variant="primary" type="submit" class="btn btn-outline-info">
+          <Button className='btn4' variant="primary" type="submit" class="btn btn-outline-info">
             Listar Por Lugar de Origen
           </Button>
         </div>
@@ -129,6 +135,7 @@ function ButtonsExample() {
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
         {datas}
+      </div>
       </div>
     </div>
 

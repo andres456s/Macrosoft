@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import './formulario.css'
 
 const Tarj = ({Nombre,Tipo,Puntuación,Dificultad,Comentarios,Fecha,Tiempo_de_preparación,Tipo_de_comida,Lugar_de_origen}) => {
   
@@ -12,9 +13,9 @@ const Tarj = ({Nombre,Tipo,Puntuación,Dificultad,Comentarios,Fecha,Tiempo_de_pr
   
 
   return (
-    <div>
+    <div >
     
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} className='containerrer'>
       <Card.Img variant="top" src="https://i.blogs.es/8968d6/risotto-a-los-cuatro-quesos/840_560.jpg" />
       <Card.Body>
         <Card.Title>{Nombre}</Card.Title>

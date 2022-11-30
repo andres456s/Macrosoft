@@ -72,11 +72,11 @@ const Login =()=> {
       <Form className='container2' onSubmit={login}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label>Dirección de correo</Form.Label>
-          <Form.Control type="email" placeholder="Ingrese su correo eléctronico" onChange={(e)=>setemail(e.target.value)}/>
+          <Form.Control className='bnm'type="email" placeholder="Ingrese su correo eléctronico" onChange={(e)=>setemail(e.target.value)}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
           <Form.Label>Contraseña</Form.Label>
-          <Form.Control type="password" placeholder="Ingrese su contraseña" onChange={(e)=>setpassword(e.target.value)}/>
+          <Form.Control className='bnm' type="password" placeholder="Ingrese su contraseña" onChange={(e)=>setpassword(e.target.value)}/>
         </Form.Group>
         <Button variant="primary" type="submit">
         Ingresar
