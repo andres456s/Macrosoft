@@ -9,6 +9,7 @@ import RecetasForm from './components/RecetasForm';
 
 import Tabla from './components/Tabla'
 import Formulario from "./components/formulario";
+import B_usuario from "./components/B_usuario";
 import { Tarjeta } from './components/tarjeta';
 import KardsAdmn from './components/KardsAdmn';
 import PanelDeAyuda from './components/PaneldeAyuda';
@@ -35,7 +36,14 @@ function App() {
 
 
               <li className="nav-item">
-                <a className="nav-link" href="formulario">Buscar</a>
+                <a className="nav-link" href="Tabla">Estadisticas</a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="formulario">Buscar Receta</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="BuscarUsuario">Buscar Usuario</a>
               </li>
               &nbsp
               &nbsp
@@ -195,6 +203,8 @@ else{
       <Route path="/RecetasForm" element={<RecetasForm/>} exact></Route>
 
       <Route path="/formulario" element={<Formulario />} exact></Route>
+
+      <Route path="/BuscarUsuario" element={<B_usuario/>} exact></Route>
 
       <Route path="/KardsAdmn" element={<KardsAdmn />} exact></Route>
       
