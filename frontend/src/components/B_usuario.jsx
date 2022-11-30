@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 import TarjPersona from './TarjBusPersona';
 import BasicCarta from './carta';
-
+import './B_usuario.css'
 
 function ButtonsEjemplo() {
 
@@ -44,8 +44,10 @@ function ButtonsEjemplo() {
         </InputGroup>
       </Form>
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        {datas}
-      </div>
+        {datas} 
+    <div className='container5' >
+    </div>
+    </div>
     </div>
 
   )

@@ -7,6 +7,7 @@ import axios from 'axios'
 import Tarj from './Tarj';
 import './formulario.css'
 
+
 function ButtonsExample() {
 
   const [name, setName] = useState(' ')
@@ -73,6 +74,7 @@ function ButtonsExample() {
     })
     console.log('respuesta')
     setreceta(respuesta.data)
+    //<div className='container6'>
   }
   const datas = receta.map(receta => (
     <Tarj key={receta._id} {...receta} />
