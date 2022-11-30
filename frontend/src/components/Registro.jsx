@@ -51,7 +51,7 @@ const Registro =()=> {
       })
 
       setTimeout(() => {
-        window.location.href='./index'
+        window.location.href='./Inicio'
       }, 1600);
 
       

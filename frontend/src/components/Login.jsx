@@ -23,9 +23,11 @@ const Login =()=> {
     //la respesta es una peticion
     console.log(usuario.name)
     axios.defaults.baseURL='http://localhost:4000'
-    const respuesta=await axios.post("./persona/crearPersona",usuario)
+    const respuesta=await axios.post("./persona/login",usuario)
     console.log(respuesta)
     const mensaje = respuesta.data.mensaje
+    const tipo = respuesta.data._id
+    console.log(tipo)
     if (mensaje!=='Bienvenido') {
       
       Swal.fire({
@@ -36,25 +38,26 @@ const Login =()=> {
 
       })
     }else{
-      //caputar los q estan en res del controller
+      //caputar los que estan en respuesta del controller
       const token =respuesta.data.token
       const name =respuesta.data.name
       const idUsuario =respuesta.data.id
-      //todo lo ant se captura en 
+
+      //todo lo anterior se captura en 
       sessionStorage.setItem('token',token)
       sessionStorage.setItem('token',name)
       sessionStorage.setItem('token',idUsuario)
 
       Swal.fire({
         icon:'success',
-        title:"Ciudad creada correctamente",
+        title:"Usuario ingresado con exito",
         showConfirmButton:false,
         timer:1500
-
+        
       })
 
       setTimeout(() => {
-        window.location.href='./index'
+        window.location.href='../Inicio'
       }, 1600);
 
       
