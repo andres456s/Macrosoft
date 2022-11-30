@@ -9,7 +9,7 @@ import {Carousel } from 'react-bootstrap';
 
 
 const RecetasForm =()=> {
-  
+
   
 
     return (
@@ -22,7 +22,7 @@ const RecetasForm =()=> {
             
             <div class="form-group">
             <label for="nombreReceta">Nombre De Receta</label>
-            <input type="name" class="form-control" id="nombreReceta" placeholder="Hamburguesa bestial"></input>
+            <input type="name" class="form-control" id="nombreReceta" placeholder="Ingresa el nombre"></input>
             </div>
             <div class="form-group">
             <label for="dificultad">Dificultad</label>
