@@ -1,0 +1,16 @@
+.ret{
+    position: center;
+    width: 1450px;
+    height: 800px;
+    margin-top: -25px;
+    filter: blur(80%);
+    background-image: url("https://img.freepik.com/vector-premium/fondo-vintage-dibujado-mano-comida-rapida_124507-1321.jpg?w=740s");
+}
+
+.estadistic{
+    position: center;
+    
+    margin-top: 25px;
+    margin-left: -50px;
+    
+}
