@@ -29,16 +29,10 @@ function App() {
           <a className="navbar-brand" href="Inicio">MacroFood</a>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            &nbsp
               &nbsp
               &nbsp
               &nbsp
-
-
-              <li className="nav-item">
-                <a className="nav-link" href="Tabla">Estadisticas</a>
-              </li>
-
+              &nbsp
               <li className="nav-item">
                 <a className="nav-link" href="formulario">Buscar Receta</a>
               </li>
@@ -49,9 +43,23 @@ function App() {
               &nbsp
               &nbsp
               &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
 
               <li className="nav-item">
                 <a className="nav-link" href="PanelDeAyuda">Panel De Ayuda</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="Tabla">Estadisticas</a>
               </li>
               &nbsp
               &nbsp
@@ -97,6 +105,8 @@ function App() {
 
       <Route path="/formulario" element={<Formulario />} exact></Route>
 
+      <Route path="/Tabla" element={<Tabla />} exact></Route>
+
     </Routes>
   </BrowserRouter>
   
@@ -113,7 +123,21 @@ function App() {
             <a className="navbar-brand" href="Inicio">MacroFood</a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
                 <li className="nav-item">
                   <a className="nav-link" href="RecetasForm">Crear Receta</a>
                   </li>
@@ -121,11 +145,27 @@ function App() {
                 <li className="nav-item">
                   <a className="nav-link" href="formulario">Buscar</a>
                 </li>
-
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
                 <li className="nav-item">
                   <a className="nav-link" href="PanelDeAyuda">Panel De Ayuda</a>
                 </li>
-
+                <li className="nav-item">
+                <a className="nav-link" href="Tabla">Estadisticas</a>
+              </li>
 
               </ul> 
             </div>
@@ -139,6 +179,7 @@ function App() {
 
       <Route path="/Inicio" element={<Inicio/>} exact></Route>
 
+      <Route path="/Tabla" element={<Tabla />} exact></Route>
 
       <Route path="/PanelDeAyuda" element={<PanelDeAyuda />} exact></Route>
 
@@ -162,26 +203,66 @@ else{
             <a className="navbar-brand" href="Inicio">MacroFood</a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
                 <li className="nav-item">
                   <a className="nav-link" href="RecetasForm">Crear Receta</a>
                   </li>
+
+                  <li className="nav-item">
+                  <a className="nav-link" href="formulario">Buscar</a>
+                </li>
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
                 <li className="nav-item">
                   <a className="nav-link" href="PanelDeAyuda">Panel De Ayuda</a>
                 </li>
 
-                <li className="nav-item">
-                  <a className="nav-link" href="formulario">Buscar</a>
-                </li>
 
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
+              &nbsp
                 <li className="nav-item">
                   <a className="nav-link" href="KardsAdmn">Eliminar Usuarios y recetas</a>
                 </li>
-
-                <li className="nav-item">
-                  <a className="nav-link" href="PanelDeAyuda">Panel De Ayuda</a>
-                </li>
-
               </ul> 
             </div>
           </div>
@@ -205,12 +286,13 @@ else{
       <Route path="/formulario" element={<Formulario />} exact></Route>
 
       <Route path="/BuscarUsuario" element={<B_usuario/>} exact></Route>
-
-      <Route path="/KardsAdmn" element={<KardsAdmn />} exact></Route>
       
       <Route path="/tarjeta" element={<Tarjeta />} exact></Route>
       
       <Route path="/Tabla" element={<Tabla />} exact></Route>
+
+      
+      <Route path="/KardsAdmn" element = {<KardsAdmn/>} exact></Route>
 
     </Routes>
   </BrowserRouter>
