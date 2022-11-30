@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const user ='anders';
 const password ='159632a';
 const dbname ='veterinaria';
-const URI =`mongodb+srv://anders:${password}@cluster0.vre5bcs.mongodb.net/test`
+const URI =`mongodb://anders:${password}@ac-6uytjpo-shard-00-00.vre5bcs.mongodb.net:27017,ac-6uytjpo-shard-00-01.vre5bcs.mongodb.net:27017,ac-6uytjpo-shard-00-02.vre5bcs.mongodb.net:27017/?ssl=true&replicaSet=atlas-2jevaa-shard-0&authSource=admin&retryWrites=true&w=majority`
 //db_conect
 mongoose
   .connect(URI,{

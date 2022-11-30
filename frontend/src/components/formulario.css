@@ -1,0 +1,131 @@
+
+.btn{
+   color: white;
+ 
+  background: #1DA1F2;
+  
+  cursor: pointer;
+  font-weight: 900;
+ 
+  transition: 0.5s;
+    
+    background: #e0e5ec;
+    
+    
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001,
+     inset 0px 0px 0px 0px #fff9,
+     inset 0px 0px 0px 0px #0001,
+     inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+   transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+    font-size: 16px;
+    color: rgba(42, 52, 84, 1);
+    text-decoration: none;
+}
+.btn:hover{
+    background: #c3cddb;
+}
+.btn:active{
+    color: rgba(42, 52, 84, 1);
+    background: #000000;
+     box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  }
+  .containerr{
+    size-adjust: calc();
+    height: 100%;
+    filter: blur(80%);
+ 
+   
+    
+  }
+  .lol{
+        margin-bottom: 1000px;
+  }
+  .ints{
+    position: relative;
+    margin-left:233px;
+}
+
+.containerr {
+    position: center;
+    width: 1450px;
+    height: 1800px;
+    margin-top: -25px;
+    background:white;
+    
+    
+
+     
+}
+.containerre {
+    position: center;
+    width: 1350px;
+    height: 1800px;
+    border-radius: 20px;
+    
+    padding: 40px;
+    box-sizing: border-box;
+    
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    font-weight:bold;
+     margin: 0 auto;
+    
+
+     
+}
+.containerrer {
+ 
+    position: relative;
+    width: 350px;
+    height: 410px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px rgb(204, 205, 223);
+    margin-top: 85px;
+    transition:box-shadow 0.6s
+
+     
+
+}
+.containerrer:hover {
+ 
+   
+   
+    box-shadow: 8px 8px 30px #566fd3b2, -8px -8px 30px rgba(111, 61, 211, 0.671);
+     
+
+     
+}
+.btn1{
+    position: absolute;
+    top: 22%;
+    left: 20%;
+}
+.btn2{
+    position: absolute;
+    top: 22%;
+    left: 7%;
+}
+
+.btn3{
+    position: absolute;
+    top: 141%;
+    left: -384%;
+}
+.btn4{
+    position: absolute;
+    top: 21.92%;
+    left: 48%;
+}
+
+

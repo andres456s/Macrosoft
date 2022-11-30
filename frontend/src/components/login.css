@@ -9,6 +9,57 @@
     box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
     font-weight:bold;
      margin: 0 auto;
+
+     
+}
+.container22 {
+    position: center;
+    width: 350px;
+    height: 460px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #dcd7e6ea;
+    box-shadow: 14px 14px 20px #bac6d3, -14px -14px 20px rgb(205, 199, 221);
+    font-weight:bold;
+     margin: 0 auto;
+     margin-top : -6px;
+     transition-duration: 0.4s;
+     
+     
+}
+.container22:hover  {
+    filter: blur(80%);
+    background: #cfc4e6ea;
+ }
+ .bnm {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1d0, inset -6px -6px 6px rgba(230, 223, 223, 0.76);
 }
 
-  
+.container34 {
+    position: center;
+    width: 350px;
+    height: 510px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #ffffffea;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    font-weight:bold;
+     margin: 0 auto;
+     margin-top : -16px;
+     
+     
+
+     
+}
+
+
+
+

@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react';
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import Button from 'react-bootstrap/Button';
+import './login.css'
 
 
 const Registro =()=> {
@@ -50,7 +51,7 @@ const Registro =()=> {
       })
 
       setTimeout(() => {
-        window.location.href='./index'
+        window.location.href='./Inicio'
       }, 1600);
 
       
@@ -59,23 +60,23 @@ const Registro =()=> {
       
     };
     return (
-      <div className='container'>
+      <div className='container34'>
             <div className='row'>
                 <h2 className='mt-6'>Crear un nuevo usuario</h2>
             </div>
-
-      <Form className='container' onSubmit={registro}>
+            
+      <Form className='container22' onSubmit={registro}>
         <Form.Group className="mb-3" controlId="formGroupNAme"    >
           <Form.Label>Nombre:</Form.Label>
-          <Form.Control type="text" placeholder="Ingrese su nombre" onChange={(e)=>setName(e.target.value)} />
+          <Form.Control className='bnm' type="text" placeholder="Ingrese su nombre" onChange={(e)=>setName(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label>Correo Electrónico:</Form.Label>
-          <Form.Control type="email" placeholder="Ingrese correo electrónico" onChange={(e)=>setemail(e.target.value)}/>
+          <Form.Control className='bnm' type="email" placeholder="Ingrese correo electrónico" onChange={(e)=>setemail(e.target.value)}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
           <Form.Label>Contraseña:</Form.Label>
-          <Form.Control type="password" placeholder="Ingrese una contraseña" onChange={(e)=>setpassword(e.target.value)}/>
+          <Form.Control className='bnm' type="password" placeholder="Ingrese una contraseña" onChange={(e)=>setpassword(e.target.value)}/>
         </Form.Group>
         <Button variant="primary" type="submit">
         Confirmar Registro

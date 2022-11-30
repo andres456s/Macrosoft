@@ -23,9 +23,17 @@ const Login =()=> {
     //la respesta es una peticion
     console.log(usuario.name)
     axios.defaults.baseURL='http://localhost:4000'
+
     const respuesta=await axios.post("./persona/crearPersona",usuario)
     console.log(respuesta)
     const mensaje = respuesta.data.mensaje
+
+    const respuesta=await axios.post("./persona/login",usuario)
+    console.log(respuesta)
+    const mensaje = respuesta.data.mensaje
+    const tipo = respuesta.data._id
+    console.log(tipo)
+
     if (mensaje!=='Bienvenido') {
       
       Swal.fire({
@@ -36,17 +44,27 @@ const Login =()=> {
 
       })
     }else{
+
       //caputar los q estan en res del controller
       const token =respuesta.data.token
       const name =respuesta.data.name
       const idUsuario =respuesta.data.id
       //todo lo ant se captura en 
+
+      //caputar los que estan en respuesta del controller
+      const token =respuesta.data.token
+      const name =respuesta.data.name
+      const idUsuario =respuesta.data.id
+
+      //todo lo anterior se captura en 
+
       sessionStorage.setItem('token',token)
       sessionStorage.setItem('token',name)
       sessionStorage.setItem('token',idUsuario)
 
       Swal.fire({
         icon:'success',
+
         title:"Ciudad creada correctamente",
         showConfirmButton:false,
         timer:1500
@@ -55,6 +73,16 @@ const Login =()=> {
 
       setTimeout(() => {
         window.location.href='./index'
+
+        title:"Usuario ingresado con exito",
+        showConfirmButton:false,
+        timer:1500
+        
+      })
+
+      setTimeout(() => {
+        window.location.href='../Inicio'
+
       }, 1600);
 
       
@@ -72,11 +100,19 @@ const Login =()=> {
       <Form className='container2' onSubmit={login}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label>Dirección de correo</Form.Label>
+
           <Form.Control type="email" placeholder="Ingrese su correo eléctronico" onChange={(e)=>setemail(e.target.value)}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
           <Form.Label>Contraseña</Form.Label>
           <Form.Control type="password" placeholder="Ingrese su contraseña" onChange={(e)=>setpassword(e.target.value)}/>
+
+          <Form.Control className='bnm'type="email" placeholder="Ingrese su correo eléctronico" onChange={(e)=>setemail(e.target.value)}/>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGroupPassword">
+          <Form.Label>Contraseña</Form.Label>
+          <Form.Control className='bnm' type="password" placeholder="Ingrese su contraseña" onChange={(e)=>setpassword(e.target.value)}/>
+
         </Form.Group>
         <Button variant="primary" type="submit">
         Ingresar

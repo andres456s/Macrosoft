@@ -1,7 +1,7 @@
 .container3 {
     position: relative;
     width: 365px;
-    height: 674px;
+    height: 874px;
     border-radius: 20px;
     
     padding: 40px;
@@ -24,7 +24,7 @@
     margin-left: 2%;
     left : 140%;
     margin-right: -190%;
-    top: 10%;
+    top: -20%;
     margin-top: -210%  ;
     
    
@@ -37,7 +37,7 @@
     
     
     
-    margin-top: 20px;
+    margin-top: 40px;
 
 }
 

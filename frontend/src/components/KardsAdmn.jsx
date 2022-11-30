@@ -54,11 +54,14 @@ const KardsAdmn = () => {
     <div class="col">
      <div class="p-3 border bg-light">{dataPersona}</div>
     </div>
+
     <div class="col">
       <div class="p-3 border bg-light"> {dataReceta}</div>
     </div>
   </div>
+  <p></p>
 </div>
+
     </>
   );
 
