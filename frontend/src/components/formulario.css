@@ -57,7 +57,7 @@
 .containerr {
     position: center;
     width: 1450px;
-    height: 1800px;
+    height: 5000px;
     margin-top: -25px;
     background:white;
     
@@ -68,7 +68,7 @@
 .containerre {
     position: center;
     width: 1350px;
-    height: 1800px;
+    height: 4000px;
     border-radius: 20px;
     
     padding: 40px;
