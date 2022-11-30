@@ -57,32 +57,8 @@ const Inicio =()=> {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-            
-            <>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://cdn1.celebritax.com/sites/default/files/styles/watermark_100/public/recetas/flan.jpg" />
-      <Card.Body>
-        <Card.Title>Flan de Leche</Card.Title>
-        <Card.Text>
-          Flan de Leche
-        </Card.Text>
-        <Button variant="primary">Ver Receta</Button>
-      </Card.Body>
-    </Card>
-    </>
-    
-    <>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://i.blogs.es/8968d6/risotto-a-los-cuatro-quesos/840_560.jpg" />
-      <Card.Body>
-        <Card.Title>Risotto</Card.Title>
-        <Card.Text>
-        Risotto
-        </Card.Text>
-        <Button variant="primary">Ver Receta</Button>
-      </Card.Body>
-    </Card>
-    </>
+    <p>
+    </p>
     <Kards />
     <>
     </>
