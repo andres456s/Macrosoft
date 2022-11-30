@@ -1,4 +1,4 @@
-import React from 'react'//comando rfc estructura de un compnente
+import React from 'react'
 import Form from 'react-bootstrap/Form';
 import { useState,useEffect } from 'react';
 import Swal from 'sweetalert2'
@@ -9,7 +9,6 @@ import {Carousel } from 'react-bootstrap';
 
 
 const PanelDeAyuda =()=> {
-  
   
 
     return (
@@ -40,18 +39,34 @@ const PanelDeAyuda =()=> {
                     </Button>
                     
             </div>
-            
-        
+                  
             <div className='container4'>
             <div className='row'>
-            <h2 className='mt-6'>Preguntas frecuentes</h2>
-            <label for="nombreReceta">¿Necesito tener una cuenta de usuario para crear una receta?</label>
-            <label for="nombreReceta">Así es</label>
+            <h2 className='mt-7'>Preguntas frecuentes</h2>
+            <div class="col">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">¿Puedo crear una receta sin ser usuario?</h5>
+            <p class="card-text">No, para crear una receta primero debes registrarte en nuestra plataforma, seguido de iniciar sesión.</p>
             </div>
             </div>
             </div>
+            <div class="col">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">¿Cómo califico una receta?</h5>
+            <p class="card-text">Para calificar a un usuario debes tener una cuenta de usuario, seguido de acceder a la receta que desees puntuar y pulsar el botón que desees.</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+           
             
     );
 }
+
+
 
 export default PanelDeAyuda;
