@@ -102,6 +102,8 @@ function App() {
       <Route path="/Login" element={<Login />} exact></Route>
 
       <Route path="/PanelDeAyuda" element={<PanelDeAyuda />} exact></Route>
+      
+      <Route path="/BuscarUsuario" element={<B_usuario/>} exact></Route>
 
       <Route path="/formulario" element={<Formulario />} exact></Route>
 

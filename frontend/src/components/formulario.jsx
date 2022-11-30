@@ -5,7 +5,7 @@ import { useState, useEffect, UseEffect } from 'react';
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import Tarj from './Tarj';
-
+import './formulario.css'
 
 function ButtonsExample() {
 
