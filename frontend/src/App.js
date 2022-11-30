@@ -35,6 +35,10 @@ function App() {
               </li>
 
               <li className="nav-item">
+                <a className="nav-link" href="Tabla">Estadisticas</a>
+              </li>
+
+              <li className="nav-item">
                 <a className="nav-link" href="formulario">Buscar</a>
               </li>
 
